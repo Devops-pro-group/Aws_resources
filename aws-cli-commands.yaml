@@ -1,0 +1,25 @@
+# to list bucket with subfolders
+aws s3 ls s3://bricelab-demo --recursive
+
+# To copy Files from local to S3 
+aws s3 cp 'devops morning devotion.drawio' s3://bricelab-demo
+
+# Copy a Single File from S3 to Local
+aws s3 cp s3://bucket-name/filename.txt ./
+
+# Copy a Single File from S3 to S3
+aws s3 cp s3://bucket-name/example s3://my-bucket/
+
+# Copy Multiple Objects From One S3 Bucket to Another
+aws s3 cp s3://bucket-name/example s3://my-bucket/
+
+#  Find Out Number of Objects and Total Size of a Bucket
+aws s3 ls s3://bucket-name --recursive --summarize --human-readable
+
+echo "# Aws_resources" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Devops-pro-group/Aws_resources.git
+git push -u origin main
